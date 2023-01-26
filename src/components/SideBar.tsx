@@ -1,17 +1,5 @@
+import { SideBarProps } from "../context/interface";
 import { Button } from "./Button";
-
-interface Genre {
-  id: number;
-  name: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
-  title: string;
-}
-
-// criada no desafio
-interface SideBarProps {
-  genres: Genre[];
-  selectedGenreId: number;
-  setSelectedGenreId: (id: number) => void;
-}
 
 export function SideBar({ genres, selectedGenreId, setSelectedGenreId}: SideBarProps) {
   function handleClickButton(id: number) {
